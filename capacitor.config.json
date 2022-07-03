@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "MoodChartApp",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

@@ -1,0 +1,7 @@
+{
+  "name": "MoodChartApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
