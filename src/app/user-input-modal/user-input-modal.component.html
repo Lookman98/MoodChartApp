@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Enter Your Mood
+    </ion-title>
+    <ion-buttons slot="end">
+        <ion-button (click)="closeModal()">Exit</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="floating"> Happy </ion-label>
+    <ion-input type="Number" [formControl]="happyInput" placeholder="Enter value from 1 - 20"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"> Sad </ion-label>
+    <ion-input type="Number" [formControl]="sadInput" max="20" placeholder="Enter value from 1 - 20"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"> Relaxed </ion-label>
+    <ion-input type="Number" [formControl]="relaxedInput" placeholder="Enter value from 1 - 20"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"> Stressed </ion-label>
+    <ion-input type="Number" [formControl]="stressInput" placeholder="Enter value from 1 - 20"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" [disabled] ="happyInput.invalid || sadInput.invalid || relaxedInput.invalid || stressInput.invalid"   (click)="updateMood()" class="ion-margin-top">Update Mood</ion-button>
+</ion-content>
